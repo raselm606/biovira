@@ -1,0 +1,113 @@
+// Button Styles
+.mi-btn {
+    background-color: $color-secondary;
+    background-image: linear-gradient(to right, $color-secondary, $color-tertiary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    color: #ffffff;
+    border: 0;
+    border-radius: $radius;
+    font-size: $body-fontsize - 2;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out 0s;
+    text-decoration: none;
+    min-height: 50px;
+    padding: 0px 30px;
+    z-index: 2;
+    vertical-align: middle;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $color-secondary;
+        background-image: linear-gradient(to right, $color-tertiary, $color-secondary);
+        z-index: -2;
+        opacity: 1;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    &:hover {
+        color: #ffffff;
+
+        &::before {
+            opacity: 0;
+        }
+    }
+
+    &.mi-btn-large {
+        font-size: $body-fontsize;
+        min-height: 60px;
+        padding: 0 35px;
+        letter-spacing: 1.5px;
+    }
+
+    &.mi-btn-small {
+        min-height: 40px;
+        padding: 0 15px;
+    }
+}
+
+// Video Button
+@keyframes videoButtonAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.55);
+        opacity: 0;
+    }
+}
+
+.mi-button-video {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border: 0;
+    border-radius: 999px;
+    color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    vertical-align: middle;
+    background-color: $color-secondary;
+    background-image: linear-gradient(to right, $color-secondary, $color-tertiary);
+    z-index: 2;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 999px;
+        background: rgba($black, 0.1);
+        z-index: -2;
+    }
+
+    &::before {
+        animation: videoButtonAnimation 1.2s ease-in-out 0s infinite both;
+    }
+
+    &::after {
+        animation: videoButtonAnimation 1.2s ease-in-out 0.3s infinite both;
+    }
+
+    &:hover {
+        color: #ffffff;
+    }
+}

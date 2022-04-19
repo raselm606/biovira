@@ -1,0 +1,26 @@
+// Section title
+.mi-sectiontitle {
+    position: relative;
+    margin-bottom: 60px;
+
+    h2 {
+        font-weight: 700;
+        color: $color-primary;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px rgba($color-primary, 0.3);
+    }
+}
+
+@supports (-webkit-background-clip: text) {
+    .mi-sectiontitle {
+        h2 {
+            background: linear-gradient(to bottom, $color-primary, $color-tertiary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

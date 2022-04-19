@@ -1,0 +1,19 @@
+// Footer
+.mi-footer {
+    color: darken(#ffffff, 30%);
+    background: lighten(#000000, 7%);
+
+    &-logo {
+        display: inline-block;
+        height: 60px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &-copyright {
+        background: lighten(#000000, 5%);
+        padding: 15px 0;
+    }
+}

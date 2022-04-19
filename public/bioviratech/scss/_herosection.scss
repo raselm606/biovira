@@ -1,0 +1,26 @@
+// Herosection
+
+.mi-herosection {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    color: darken($white, 20%);
+    
+    &-inner {
+        background-color: rgba($color-primary, 0.5);
+        background-image: url(/public/bioviratech/images/background-shape.png);
+    }
+
+    &-text {
+        color: darken($white, 20%);
+    }
+}
+
+.particle-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
