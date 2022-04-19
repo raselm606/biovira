@@ -1,0 +1,39 @@
+// Tokenomics
+.mi-tokenomics {
+    background-color: $color-grey;
+    border-radius: $radius * 2;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.4s ease-in-out 0s;
+        border-radius: $radius * 2;
+    }
+
+    &::before {
+        background-color: $color-grey;
+        z-index: -1;
+    }
+
+    &::after {
+        background: linear-gradient(to right, $color-secondary, $color-tertiary);
+        z-index: -2;
+    }
+    h5{
+        margin-bottom: 5px;
+    }
+
+    &:hover {
+        &::after {
+            transform: rotate(3deg);
+        }
+    }
+}

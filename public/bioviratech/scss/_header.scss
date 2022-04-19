@@ -1,0 +1,46 @@
+// Header
+.mi-header{
+    position: relative;
+    z-index: 100;
+
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-logo{
+        height: 60px;
+        display: inline-block;
+        width: auto;
+
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &-navigation{
+        ul{
+            li{
+                a{
+                    color: darken($white, 20%);
+                    font-size: 14px;
+                }
+                &:hover{
+                    a{
+                        color: $color-secondary
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.mi-header-transparent{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+}

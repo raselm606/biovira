@@ -1,0 +1,116 @@
+// Countdownbox
+.mi-countdownbox {
+    padding: 30px;
+    background: rgba($white, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: $radius;
+    box-shadow: 0 0 1px 1px rgba($white, 0.1);
+
+    &-clock {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                border: 1px dashed $color-secondary;
+                min-height: 80px;
+                min-width: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+                padding: 10px 5px;
+                border-radius: 6px;
+                position: relative;
+
+                span {
+                    font-size: 42px;
+                    line-height: 1;
+                    font-weight: 700;
+                    color: $color-secondary;
+
+                    small {
+                        display: block;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:not(:last-child) {
+                    &::after {
+                        content: ":";
+                        position: absolute;
+                        left: calc(100% + 11px);
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 32px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &-rangecontent {
+        span {
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        strong {
+            display: block;
+            color: $color-secondary;
+        }
+
+        .left{
+            text-align: left;
+        }
+        .right{
+            text-align: right;
+        }
+    }
+
+    &-rangebar {
+        background: rgba($color-secondary, 0.3);
+        display: block;
+        height: 10px;
+        width: 100%;
+        position: relative;
+        margin: 10px 0;
+        border-radius: 100px;
+        margin: 15px 0;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            height: 30px;
+            width: 2px;
+            background: rgba($white, 0.5);
+            border-radius: 100px;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 20px;
+        }
+
+        &::after {
+            left: auto;
+            right: 20px;
+        }
+    }
+
+    &-range {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: linear-gradient(to right, $color-secondary, $color-tertiary );
+        border-radius: 100px;
+    }
+}

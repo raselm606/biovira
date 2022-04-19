@@ -1,0 +1,21 @@
+// Navigation
+.mi-navigation{
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 0 30px;
+        li{
+            a{
+                display: inline-block;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                color: $color-heading;
+                font-size: $body-fontsize;
+                padding: 30px 0;
+            }
+            &:hover a{
+                color: $color-primary;
+            }
+        }
+    }
+}
