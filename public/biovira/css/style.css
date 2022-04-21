@@ -2862,8 +2862,18 @@ h6,
 
 .bg-pattern-dots {
     background-image: url(../images/dot-b.png);
-    background-size: contain;
-    background-repeat: repeat-y;
+    background-size: auto;
+    background-repeat: repeat;
+}
+.bg-pattern-dots-c {
+    background-image: url(../images/dot-c.png);
+    background-size: auto;
+    background-repeat: repeat;
+}
+.bg-pattern-dots-d {
+    background-image: url(../images/dot-d.png);
+    background-size: auto;
+    background-repeat: repeat;
 }
 
 .bg-contain {
@@ -8436,7 +8446,7 @@ ul.progress-info {
 
 .preloader-alt::after,
 .preloader-alt:before {
-    background: #090A2B;
+    background: #090a2b;
 }
 
 .page-loaded .preloader.no-split:before,
@@ -9480,10 +9490,6 @@ ul.progress-info {
     width: 36px;
 }
 
-.gfx {
-    max-width: 400px;
-}
-
 .gfx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -9498,9 +9504,6 @@ ul.progress-info {
 }
 
 @media (min-width: 768px) {
-    .gfx {
-        max-width: 500px;
-    }
     .gfx-inherit {
         max-width: 420px;
     }
